@@ -1,30 +1,29 @@
 <html lang="en">
     <head>
 
-
         <title>Wanderlust</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link rel = "stylesheet" href = "styles.css" type= "text/css"/>
-        <link rel="shortcut icon" href="img/favicon.ico">
+        <!--<link rel="shortcut icon" href="img/favicon.ico">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-        <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png">
+        <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png">-->
 
     </head>
 
    <body>
-    <div id="container">
+    
 
-        <!-- Navbar -->
-        <nav class="navbar">
-        <div class="nav-left">
-            <a href="index.html">
-            <img src="img/logo.png" alt="Wanderlust Logo" id="logo" />
-            </a>
-        </div>
+  
+    <nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">
+        <img src="img/logo.png" alt="Wanderlust Logo" id="logo" />
+        </a>
+    </div>
 
         <div class="nav-right">
             <ul>
@@ -35,16 +34,16 @@
             <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
-        </nav>
+    </nav>
 
-        <!-- Hero Image -->
-        <section id="hero">
+
+    <section class="hero">
         <img src="img/mountains.jpg" alt="A beautiful mountain landscape" />
-        </section>
+    </section>
 
-        <!-- Main Section -->
-        <main>
-        <div class="intro">
+      
+    <main>
+        <div class="welcome">
             <div class="intro-left">
                 <h1>Your Next Adventure Awaits</h1>
             </div>
@@ -58,6 +57,16 @@
             </div>
         </div>
 
+        <div class="video-container">
+            <video controls poster="img/thumbnail.png">
+                <source src="media/beach_walk.mp4" type="video/mp4">
+                <source src="media/beach_walk.webm" type="video/webm">
+
+                <track src="media/captions.vtt" kind="captions" srclang="en" label="English">
+                <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <div class="grid">
             <figure class="frame">
@@ -75,14 +84,14 @@
             <figcaption class="pic-text">Choose a Travel Plan</figcaption>
             </figure>
         </div>
-        </main>
+    </main>
 
         <!-- Footer -->
-        <footer>
+    <footer>
         <p>&copy; 2025 Wanderlust. All rights reserved. Created by Daniel Manabat.</p>
         <p><a href="mailto:Wanderlust.net">Wanderlust.net</a></p>
-        </footer>
+    </footer>
 
-    </div>
+    
     </body>
 </html>

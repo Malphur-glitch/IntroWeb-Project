@@ -1,4 +1,15 @@
 /* ============================= */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -176,34 +187,35 @@ main {
 }
 
 /* =============================================*/
-/* Places Feature */
-#featured-section {
-  padding: 2rem 1rem;
-  text-align: center;
+/* Places*/
+
+#places{
+  font-family: Playfair Display, serif;
 }
 
-#featured-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #a3473c;
-  margin-bottom: 1.5rem;
+
+#featured-section {
+  padding: 2rem 1rem;
+  width: 100%;
 }
 
 #featured-card {
   display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom right, #fff8f2, #fae6d4);
+  flex-direction: column; /* stacked on mobile */
+  background: linear-gradient(to bottom right, #F0E7D9, #F4B7A0 41%, #E56A7A 70%);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 #featured-card img {
   width: 100%;
-  height: 240px;
+  height: 250px;
   object-fit: cover;
+  display: block;
 }
 
 .featured-text {
@@ -211,38 +223,16 @@ main {
   text-align: left;
 }
 
-.featured-text h3 {
-  color: #a3473c;
-  margin-bottom: 0.8rem;
-  font-size: 1.5rem;
-}
-
-.featured-text ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* =============================================*/
-/* Other Destinations Section (Grid Cards) */
-
 .other-destinations {
   padding: 2rem 1rem;
-  text-align: center;
+  width: 100%;
 }
 
-.other-destinations h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #a3473c;
-  margin-bottom: 1.5rem;
-}
-
-.grid {
+.places-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* stack on mobile */
   gap: 1.5rem;
+  padding: 1.5rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -250,10 +240,11 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #fff8f2, #fae6d4);
+  background: linear-gradient(to bottom right, #F0E7D9, #F4B7A0 41%, #E56A7A 70%);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .card img {
@@ -263,21 +254,9 @@ main {
 }
 
 .card-content {
-  text-align: left;
   padding: 1.2rem;
+  text-align: left;
 }
-
-.card-content h3 {
-  color: #a3473c;
-  margin-bottom: 0.8rem;
-}
-
-.card-content ul {
-  padding-left: 1.2rem;
-  line-height: 1.6;
-  color: #555;
-}
-
 /* =============================================*/
 /* Footer */
 
@@ -305,6 +284,8 @@ footer a:hover {
 /* Tablet*/
 
 @media screen and (min-width: 768px) {
+
+ 
   .hero {
     display: block;
   }
@@ -351,35 +332,63 @@ footer a:hover {
     height: auto;
   }
 
-  #featured-card {
-  flex-direction: row;
-  align-items: center;
-  text-align: left;
+  #featured-section {
+    padding: 3rem 0;
+    width: 100%;
   }
 
-  #featured-card img {
-    width: 50%;
-    height: 300px;
+  #featured-card {
+    flex-direction: row; /* text left, image right */
+    align-items: stretch;
+    overflow-x: hidden;
   }
 
   .featured-text {
-    padding: 2rem;
+    width: 50%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
   }
 
   #featured-card img {
     width: 50%;
-    border-bottom: none;
-    border-right: 3px solid #a3473c;
+    height: auto;
+    object-fit: cover;
+    border-left: 3px solid #a3473c;
   }
 
-  .grid {
+  /* Other Destinations */
+  .places-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .card {
+    flex-direction: row; /* image left, text right */
+    align-items: stretch;
   }
 
   .card img {
-    height: 220px;
+    width: 45%;
+    height: auto;
+  }
+
+  .card-content {
+    width: 55%;
+    padding: 1.5rem;
+  }
+
+  .card-content li{
+    font-size: 0.8rem;
   }
 }
+
+
+
 /* =============================================*/
 /* Desktop*/
 
@@ -420,19 +429,46 @@ footer a:hover {
     margin: auto;
   }
 
-  #featured {
-  padding: 4rem 6rem;
+  #featured-section {
+    padding: 3rem 0;
+    width: 100%;
   }
 
   #featured-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .featured-text {
+    width: 50%;
+    padding: 2rem 3rem;
+  }
+
+  #featured-card img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  /* Other Destinations */
+  .places-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
     gap: 2rem;
   }
 
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+  .card {
+    flex-direction: row; /* image left, text right */
+    align-items: stretch;
   }
 
   .card img {
-    height: 240px;
+    width: 45%;
+    height: auto;
+  }
+
+  .card-content {
+    width: 55%;
+    padding: 1.5rem;
   }
 }

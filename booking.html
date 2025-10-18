@@ -1,0 +1,186 @@
+<html lang="en">
+    <head>
+
+
+        <title>Wanderlust</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel = "stylesheet" href = "styles.css" type= "text/css"/>
+        <!--<link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png">-->
+
+    </head>
+
+   <body>
+    <div id="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">
+            <img src="img/logo.png" alt="Wanderlust Logo" id="logo" />
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        </nav>
+
+        <!-- Hero Image -->
+        <section class="hero">
+        <img src="img/santorini.jpg" alt="Santorini Greece" />
+        </section>
+
+        <!-- Main Section -->
+        <main>
+                <div class="mobile">
+                    <h1>Book Your Trip</h1>
+                    <h3>Basic Plan</h3>
+                    <p>✔ Guided Tour</p>
+                    <p>✔ 1 Day Duration</p>
+                    <p>✔ Starts at 50$</p>
+
+                    <h3>Standard Plan</h3>
+                    <p>✔ Guided Tour</p>
+                    <p>✔ Meals</p>
+                    <p>✔ 3 Day Duration</p>
+                    <p>✔ Starts at 150$</p>
+
+                    <h3>Premium Plan</h3>
+                    <p>✔ Guided Tour</p>
+                    <p>✔ Meals</p>
+                    <p>✔ Transportation</p>
+                    <p>✔ 5 Day Duration</p>
+                    <p>✔ Starts at 250$</p>
+                </div>
+
+                <div class="tablet-desktop">
+                    <table>
+                        <caption>Choose Your Plan</caption>
+                        <tr>
+                            <th>Features</th>
+                            <th>Basic Plan</th>
+                            <th>Standard Plan</th>
+                            <th>Premium Plan</th>
+                        </tr>
+
+                        <tr>
+                            <td>Guided Tour</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+
+                        <tr class="shaded-row">
+                            <td>Meals</td>
+                            <td>--</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transportation</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>✔</td>
+                        </tr>
+
+                        <tr class="shaded-row">
+                            <td>Duration</td>
+                            <td>1 Day</td>
+                            <td>3 Days</td>
+                            <td>5 Days</td>
+                        </tr>
+
+                        <tr>
+                            <td>Price (may vary)</td>
+                            <td>Starts at 50$</td>
+                            <td>Starts at 150$</td>
+                            <td>Starts at 250$</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div id="form">
+                    <h2>Fill In The Form to Start The Booking Process</h2>
+
+                    <form class="form-grid">
+                        <fieldset>
+                            <legend>Customer Information</legend>
+                            <label for="fName">First Name:</label>
+                            <input type="text" id="fName" name="fName" required>
+
+                            <label for="lName">Last Name:</label>
+                            <input type="text" id="lName" name="lName" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Destination and Plan</legend>
+                            <label for="destination">Country/Destination:</label>
+                            <input type="text" id="destination" name="destination" required>
+
+                            <label for="plan">Choose Your Plan:</label>
+                            <select id="plan" name="plan" required>
+                                <option value="basic">Basic Plan</option>
+                                <option value="standard">Standard Plan</option>
+                                <option value="premium">Premium Plan</option>
+                            </select>
+
+                            <label for="payment">Date of Travel:</label>
+                            <input type="date" id="payment" name="payment" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Payment Method</legend>
+                            <label for="reference">Preferred Payment Method:</label>
+                            <select name="reference" id="reference">
+                                <option value="credit_card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="bank_transfer">Bank Transfer</option>
+                            </select> 
+
+                           <div class="terms">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                <label for="agree">I have read and agreed to the <a href="#">terms and conditions</a></label>
+                            </div>
+
+                        </fieldset>
+
+                
+                        <div class="form-buttons">
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </main>
+
+        <!-- Footer -->
+        <footer>
+        <p>&copy; 2025 Wanderlust. All rights reserved. Created by Daniel Manabat.</p>
+        <p><a href="mailto:Wanderlust.net">Wanderlust.net</a></p>
+        </footer>
+
+    </div>
+    </body>
+</html>

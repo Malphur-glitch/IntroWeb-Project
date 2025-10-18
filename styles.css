@@ -146,7 +146,7 @@ main {
 }
 
 /* ============================================= */
-/* Grid for mobile*/
+/* Grid in index for mobile*/
 
 .grid {
   display: grid;
@@ -213,7 +213,7 @@ main {
 
 #featured-card img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   display: block;
 }
@@ -392,6 +392,88 @@ input[type="checkbox"] {
 }
 
 /* =============================================*/
+/* Reviews */
+.grid article {
+  background-color: #FBEAE1;
+  border: 1px solid #a3473c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.grid article h3 {
+  font-family: 'Playfair Display', serif;
+  color: #a3473c;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.grid article p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+}
+
+.grid article p:first-of-type {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #a3473c;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.review-header h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #a3473c;
+  font-size: 1.2rem;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover;
+  border: 2px solid #a3473c;
+}
+
+/* Book Now Button under reviews */
+.review-cta {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.review-cta p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.review-cta .btn {
+  background-color: #a3473c;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.review-cta .btn:hover {
+  background-color: #c93f4b;
+}
+
+/* =============================================*/
 /* Footer */
 
 footer {
@@ -419,7 +501,6 @@ footer a:hover {
 
 @media screen and (min-width: 768px) {
 
- 
   .hero {
     display: block;
   }
@@ -566,10 +647,6 @@ footer a:hover {
 
 }
 
-
-
-
-
 /* =============================================*/
 /* Desktop*/
 
@@ -611,25 +688,33 @@ footer a:hover {
   }
 
   #featured-section {
-    padding: 3rem 0;
+    padding: 2rem 0;
     width: 100%;
+  }
+
+  #featured-section h2{
+    font-size: 2rem;
   }
 
   #featured-card {
     flex-direction: row;
     align-items: stretch;
+    min-height: 400px;
   }
 
   .featured-text {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     width: 50%;
-    padding: 2rem 3rem;
+    padding: 1.5rem 2rem;
   }
 
   #featured-card img {
     width: 50%;
     height: auto;
     object-fit: cover;
+    scale: 0.95; 
+    transform-origin: center;
+    border-radius: 20px;
   }
   /* Other Destinations */
   .places-grid {
@@ -652,6 +737,7 @@ footer a:hover {
   .card-content {
     width: 55%;
     padding: 1.5rem;
+    font-size: 1.3rem;
   }
 
   /*Booking Page Forms */

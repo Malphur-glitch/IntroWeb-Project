@@ -49,6 +49,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  flex-direction: column;
+  padding: 0;
 }
 
 .nav-right a {
@@ -63,6 +65,46 @@ body {
 .nav-right .active {
   color: #a3473c;
 }
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #a3473c;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+
+.nav-right {
+  display: none; 
+  width: 100%;
+  text-align: center;
+}
+
+.nav-right.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.nav-right li {
+  margin: 0.6rem 0;
+
+}
+
+
 
 /* =============================================*/
 /* Makes hero invisible in mobile*/
@@ -294,12 +336,12 @@ main {
 
 #form h2 {
   font-family: 'Playfair Display', serif;
-  color: #a3473c;
+  color: #A3473C;
   margin-bottom: 1.5rem;
 }
 
 fieldset {
-  border: 2px solid #a3473c;
+  border: 2px solid #A3473C;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -332,7 +374,7 @@ input[type="checkbox"] {
 }
 
 .btn {
-  background-color: #a3473c;
+  background-color: #A3473C;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -444,7 +486,7 @@ input[type="checkbox"] {
   height: 50px;
   border-radius: 50%; 
   object-fit: cover;
-  border: 2px solid #a3473c;
+  border: 2px solid #A3473C;
 }
 
 /* Book Now Button under reviews */
@@ -461,7 +503,7 @@ input[type="checkbox"] {
 }
 
 .review-cta .btn {
-  background-color: #a3473c;
+  background-color: #A3473C;
   color: #fff;
   padding: 0.8rem 2rem;
   border-radius: 8px;
@@ -475,6 +517,15 @@ input[type="checkbox"] {
 }
 /* =============================================*/
 /* Contact */
+
+#contact h2{
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+}
+
+#contact h4 a{
+  text-decoration: none;
+}
 .social-links {
   display: flex;
   flex-direction: column;  
@@ -516,29 +567,49 @@ input[type="checkbox"] {
 /* Footer */
 
 footer {
-  background-color: #a3473c;
-  color: #fff;
+  background-color: #A73A2E;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 1px 1rem;
+}
+
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem; /* space between icons */
+  flex-wrap: nowrap; 
+  margin-bottom: 0.1rem;
+}
+
+.social-links-footer a{
+  display: inline-block;
+}
+
+.social-icon-footer img {
+  width: 30px; /* adjust as needed */
+  height: 30px;
+  object-fit: contain;
+}
+
+
+footer p {
+  margin: 0.3rem 0;
   font-size: 0.9rem;
+  color: #000;
 }
 
 footer a {
-  color: #ffb896;
+  color: #A73A2E;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-footer a:hover {
-  color: #fff;
-}
 
 
 
 /* =============================================*/
 /* Tablet*/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
 
   .hero {
     display: block;
@@ -549,6 +620,25 @@ footer a:hover {
     height: 380px;
     object-fit: cover;
     border-bottom: 4px solid #a3473c;
+  }
+
+  .hamburger {
+    display: none; 
+  }
+
+  .nav-right {
+    display: flex !important; 
+    width: auto;
+  }
+
+  .nav-right ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-right li {
+    margin: 0;
   }
 
   .welcome {
@@ -701,7 +791,7 @@ footer a:hover {
 /* =============================================*/
 /* Desktop*/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px){
   .navbar {
     flex-direction: row;
     justify-content: space-between;
@@ -801,5 +891,35 @@ footer a:hover {
   .form-grid fieldset {
     margin: 0;
   }
+
+}
+
+/* =============================================*/
+/* Print*/
+@media print{
+    body{
+        background-color: #fff;
+        color: #000;
+    }
+
+     nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline;
+        border: none;
+    }
+
+    nav li a {
+        font-size: 0.9em; 
+        padding: 0;
+        color: black;
+        background: none;
+    }
+
 
 }

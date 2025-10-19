@@ -455,6 +455,7 @@ input[type="checkbox"] {
 }
 
 .review-cta p {
+  padding-bottom: 1rem;
   margin-bottom: 0.8rem;
   font-size: 1rem;
 }
@@ -471,6 +472,44 @@ input[type="checkbox"] {
 
 .review-cta .btn:hover {
   background-color: #c93f4b;
+}
+/* =============================================*/
+/* Contact */
+.social-links {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;    
+  gap: 1rem;                
+  margin: 2rem 0;
+}
+
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #a3473c;
+}
+
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.map{
+    border:2px solid #000;
+    width: 95%;
+    height: 50%;
 }
 
 /* =============================================*/
@@ -643,6 +682,18 @@ footer a:hover {
   .tablet-desktop .shaded-row{
     background-color: #F4D9C2;
   }
+ /*Contact Page */
+  .social-links {
+    flex-direction: row;      
+    justify-content: center;  
+    flex-wrap: wrap;        
+    gap: 2rem;
+  }
+
+  .map{
+        width: 600px;
+        height: 450px;
+    }
 
 
 }

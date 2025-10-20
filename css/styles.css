@@ -25,7 +25,6 @@ body {
   align-items: center;
   padding: 1rem;
   background-color: #FFF;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 10;
